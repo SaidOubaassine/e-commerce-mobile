@@ -9,7 +9,7 @@ export const fetchProducts = () => {
     const userId = getState().auth.userId;
     try {
       const response = await fetch(
-        "https://shop-8d237-default-rtdb.firebaseio.com/products.json"
+        ""
       );
       if (!response.ok) {
         throw new Error(
@@ -45,7 +45,7 @@ export const deleteProduct = (productId) => {
   return async (dispatch, getState) => {
     const token = getState().auth.token;
     const response = await fetch(
-      `https://shop-8d237-default-rtdb.firebaseio.com/products/${productId}.json?auth=${token}`,
+      ``,
       {
         method: "DELETE",
       }
@@ -70,7 +70,7 @@ export const createProduct = (title, description, imageUrl, price) => {
     const token = getState().auth.token;
     const userId = getState().auth.userId;
     const response = await fetch(
-      `https://shop-8d237-default-rtdb.firebaseio.com/products.json?auth=${token}`,
+      ``,
       {
         method: "POST",
         headers: {
@@ -114,7 +114,7 @@ export const updateProduct = (id, title, description, imageUrl) => {
   return async (dispatch, getState) => {
     const token = getState().auth.token;
     const response = await fetch(
-      `https://shop-8d237-default-rtdb.firebaseio.com/products/${id}.json?auth=${token}`,
+      ``,
       {
         method: "PATCH",
         headers: {

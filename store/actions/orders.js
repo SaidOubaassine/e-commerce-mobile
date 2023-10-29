@@ -8,7 +8,7 @@ export const fetchOrders = () => {
     const userId = getState().auth.userId;
     try {
       const response = await fetch(
-        `https://shop-8d237-default-rtdb.firebaseio.com/orders/${userId}.json`
+        ``
       );
      
       if (!response.ok) {
@@ -46,7 +46,7 @@ export const addOrder = (cartItems, totalAmount) => {
     const userId = getState().auth.userId;
     const date = new Date();
     const response = await fetch(
-      `https://shop-8d237-default-rtdb.firebaseio.com/orders/${userId}.json?auth=${token}`,
+      ``,
       {
         method: "POST",
         headers: {
