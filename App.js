@@ -1,4 +1,4 @@
-import NavigationContainer from "./navigation/NavigationContainer";
+import NavigationContainer from "./navigation/navigationContainer";
 import { useFonts } from "expo-font";
 import { Provider } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from "redux";
